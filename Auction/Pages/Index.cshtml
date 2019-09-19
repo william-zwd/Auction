@@ -1,0 +1,48 @@
+﻿@page
+
+<div class="container">
+    <h3>Auction Item</h3>
+    <table>
+        <tr>
+            <td rowspan="2">
+                <img src="~/images/question.png" alt="Auction Item Image" height="200" width="400" />
+            </td>
+            <td>Hacker Rank Test</td>
+        </tr>
+        <tr>
+            <td>One of Hacker Rank Test question</td>
+        </tr>
+    </table>
+
+    <h3>Auction History</h3>
+    <table border="1" id="auctionHistory">
+        <tr>
+            <th width="120">User</th>
+            <th width="100">Price</th>
+            <th width="160">Time</th>
+        </tr>
+            <tr>
+                <td>System</td>
+                <td>
+                    $10.00
+                </td>
+                <td>
+                    @DateTime.Now
+                </td>
+            </tr>
+        <tr></tr>
+    </table>
+
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            User....<input type="text" id="userInput" />
+            <br />
+            Price...<input type="text" id="priceInput" />
+            <input type="button" id="sendButton" value="Bid" />
+        </div>
+    </div>
+
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/auction.js"></script>
